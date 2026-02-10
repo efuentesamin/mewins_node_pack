@@ -13,8 +13,8 @@ class SimpleExpression:
         """
         return {
             "required": {
-                "operand_a": ("INT,FLOAT", {"display": "number"}),
-                "operand_b": ("INT,FLOAT", {"display": "number"}),
+                "operand_a": ("INT", {"display": "number"}),
+                "operand_b": ("INT", {"display": "number"}),
                 "operator": (["=", "!=", ">", "<", ">=", "<="],),
             },
         }
