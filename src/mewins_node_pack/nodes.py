@@ -1,8 +1,8 @@
-from mewins_node_pack.int_operation import IntOperation
-from mewins_node_pack.simple_expression import SimpleExpression
-from mewins_node_pack.float_operation import FloatOperation
-from mewins_node_pack.float_to_int import FloatToInt
-from mewins_node_pack.int_to_float import IntToFloat
+from .int_operation import IntOperation
+from .simple_expression import SimpleExpression
+from .float_operation import FloatOperation
+from .float_to_int import FloatToInt
+from .int_to_float import IntToFloat
 
 
 # A dictionary that contains all nodes you want to export with their names
