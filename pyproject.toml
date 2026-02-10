@@ -11,23 +11,25 @@ authors = [
 ]
 readme = "README.md"
 license = {text = "GNU General Public License v3"}
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 classifiers = []
 dependencies = [
 
 ]
 
 
-
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "bump-my-version",
-    "coverage",  # testing
-    "mypy",  # linting
-    "pre-commit", # runs linting on commit
-    "pytest",  # testing
-    "ruff",  # linting
+    "mypy>=1.19.0",
+    "pre-commit>=4.5.0",
+    "ruff>=0.14.7",
 ]
+test = [
+    "pytest>=9.0.1",
+    "respx>=0.21.1",
+    "pytest-asyncio>=0.23.5",
+]
+
 
 [project.urls]
 Repository = "https://github.com/efuentesamin/mewins_node_pack"
@@ -60,6 +62,7 @@ files = "."
 strict = true
 warn_unreachable = true
 warn_no_return = true
+disable_error_code = ["import-untyped"]
 
 [[tool.mypy.overrides]]
 # Don't require test functions to include types
@@ -71,7 +74,7 @@ disable_error_code = "attr-defined"
 # extend-exclude = ["static", "ci/templates"]
 line-length = 140
 src = ["src", "tests"]
-target-version = "py39"
+target-version = "py312"
 
 # Add rules to ban exec/eval
 [tool.ruff.lint]
